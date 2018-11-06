@@ -39,6 +39,8 @@ function(_setup_sdk_internal_paths)
 
     set(ARDUINO_SDK_BIN_PATH "${ARDUINO_SDK_PATH}/hardware/tools/avr/bin" CACHE PATH
             "Path to Arduino SDK's binaries folder")
+    set(ARDUINO_SDK_BUILD_IN_LIBRARIES_PATH "${ARDUINO_SDK_PATH}/hardware/arduino/avr/libraries" CACHE PATH
+            "Path to Arduino SDK's binaries folder")
     set(ARDUINO_SDK_ROOT_PATH "${ARDUINO_SDK_PATH}/hardware/tools/avr" CACHE PATH
             "Path to Arduino SDK's sys-root folder")
     set(ARDUINO_SDK_LIBRARIES_PATH "${ARDUINO_SDK_PATH}/libraries" CACHE PATH
