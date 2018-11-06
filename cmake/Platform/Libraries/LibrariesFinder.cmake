@@ -26,9 +26,11 @@ function(find_arduino_library _target_name _library_name _board_id)
         convert_string_to_pascal_case(${_library_name} _library_name)
     endif ()
 
+message(${_library_name})
+message( ${ARDUINO_SDK_BUILD_IN_LIBRARIES_PATH})
     find_file(library_path
             NAMES ${_library_name}
-            PATHS ${ARDUINO_SDK_LIBRARIES_PATH} ${ARDUINO_CMAKE_SKETCHBOOK_PATH}
+            PATHS ${ARDUINO_SDK_LIBRARIES_PATH} ${ARDUINO_CMAKE_SKETCHBOOK_PATH} ${ARDUINO_SDK_BUILD_IN_LIBRARIES_PATH}
             ${CMAKE_CURRENT_SOURCE_DIR} ${PROJECT_SOURCE_DIR}
             PATH_SUFFIXES libraries dependencies
             NO_DEFAULT_PATH
